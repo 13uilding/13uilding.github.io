@@ -1,64 +1,89 @@
-h1 {
-    color: rgb(46, 156, 145);
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
 }
 
 body {
-    margin: 0;
+  margin: 0;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif
 }
 
 .meat {
-    width: 80%;
-    margin-left: 0 auto;
+    position: relative;
+    margin: 0 auto;
     padding: 2em, 1em;
+    width: 80%;
 }
 
-.clearfix {
-    clear: both;
-    content: "";
-    display:block;
+h1 {
+    color: rgb(46, 156, 145);
+    border-bottom: 2px solid;
+
+}
+
+
+/* Image code */
+.image-wrap {
+    float: left;
+    margin-right: 1em;
+    width: 150px;
+    height: 200px;
+}
+
+/* resize images */
+.image-wrap img {
+    width: 100%;
+    height: auto;
+    border: 2px solid lightblue;
+}
+
+
+/* Banner, my name, and navigation */
+.banner {
+  border-bottom: #ddd solid 2px;
+  margin: 0 10%;
+  width: 80%;
+  height: 100px;
 }
 
 .my-name {
-    color: #fff;
-    background-color: rgb(46, 156, 145);
-    font-size: 2rem;
-    padding: 2rem;
-    float: left;
-}
-.banner {
-    float: left;
-    width: 80%;
-    margin: 0 10%;
-    border-bottom: #ddd solid 2px;
-}
+  background-color: rgb(46, 156, 145);
+  color: #fff;
+  float: left;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 2rem;
+  }
 
 nav {
-    float: right;
-    padding: 2em 0; 
+  float: right;
+  padding: 2em 0;
 }
 
 ul {
-    list-style-type: none;
-    margin:0;
-    padding: 0;
-    overflow: hidden;
-    color: #ddd;
+  color: #ddd;
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
 }
 
 li {
-    float: left;
-    border-right: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  float: left;
 }
 
 li a {
-    display: block;
-    color: rgb(46, 156, 145);
-    text-align: center;
-    padding: 0 10px;
-    text-decoration: none;
-    font-size: 20px; 
+  color: rgb(46, 156, 145);
+  display: block;
+  font-size: 20px;
+  padding: 0 10px;
+  text-align: center;
+  text-decoration: none;
 }
 
 ul li:last-child {
-    border: none;
+  border: none;
 }
