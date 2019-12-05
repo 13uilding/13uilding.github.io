@@ -14,11 +14,11 @@ body {
     position: relative;
     margin: 0 auto;
     padding: 2em, 1em;
-    width: 80%;
+    width: 60%;
 }
 
 h1 {
-    color: rgb(46, 156, 145);
+    color: cadetblue;
     border-bottom: 2px solid;
 
 }
@@ -43,13 +43,13 @@ h1 {
 /* Banner, my name, and navigation */
 .banner {
   border-bottom: #ddd solid 2px;
-  margin: 0 10%;
-  width: 80%;
+  margin: 0 auto;
+  width: 60%;
   height: 100px;
 }
 
 .my-name {
-  background-color: rgb(46, 156, 145);
+  background-color: cadetblue;
   color: #fff;
   float: left;
   font-size: 2rem;
@@ -86,4 +86,40 @@ li a {
 
 ul li:last-child {
   border: none;
+}
+
+/* Added stuff */
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: cadetblue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: cadetblue;
+}
+
+#yourmessage {
+  padding: 12px 20px 150px;
+}
+
+.questions {
+  border-radius: 5px;
+  padding: 20px;
 }
