@@ -2,9 +2,63 @@ h1 {
     color: rgb(46, 156, 145);
 }
 
+body {
+    margin: 0;
+}
+
+.meat {
+    width: 80%;
+    margin-left: 0 auto;
+    padding: 2em, 1em;
+}
+
+.clearfix {
+    clear: both;
+    content: "";
+    display:block;
+}
+
 .my-name {
     color: #fff;
     background-color: rgb(46, 156, 145);
+    font-size: 2rem;
     padding: 2rem;
-    float
+    float: left;
+}
+.banner {
+    float: left;
+    width: 80%;
+    margin: 0 10%;
+    border-bottom: #ddd solid 2px;
+}
+
+nav {
+    float: right;
+    padding: 2em 0; 
+}
+
+ul {
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+    overflow: hidden;
+    color: #ddd;
+}
+
+li {
+    float: left;
+    border-right: 1px solid #ddd;
+}
+
+li a {
+    display: block;
+    color: rgb(46, 156, 145);
+    text-align: center;
+    padding: 0 10px;
+    text-decoration: none;
+    font-size: 20px; 
+}
+
+ul li:last-child {
+    border: none;
 }
