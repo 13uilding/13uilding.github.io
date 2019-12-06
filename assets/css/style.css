@@ -14,11 +14,35 @@ body {
 
 .page-cover {
   background-color: #fff;
-  width: 70%;
+  width: 960px;
   margin: 0 auto;
 }
 
+footer {
+  border-top: 8px solid cadetblue;
+  background-color: #666666;
+  height: 50px;
+  text-align: center;
+  font-size: 9px;
+}
 
+a.nostyle:link {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
+
+a.nostyle:visited {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
+
+a.nostyle:hover {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: pointer;
+}
 
 /* Banner, my name, navigation, and the horizontal list. */
 .banner {
@@ -125,6 +149,7 @@ h3 {
     color: #fff;
     font-weight: bold;
     font-family: 'Georgia', Times, 'Times New Roman', serif;
+    text-align: center;
 }
 
 /* Contact Page */
