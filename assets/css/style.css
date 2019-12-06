@@ -6,16 +6,28 @@
 
 body {
   margin: 0;
+  height: 100%;
   font-size: 20px;
   font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
   background-image: linear-gradient(MistyRose, RosyBrown);
   color: #777;
 }
 
+p {
+  padding-bottom: 20px;
+}
+
 .page-cover {
   background-color: #fff;
   width: 960px;
   margin: 0 auto;
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+
+.push{
+  height: 300px;
+  background-color: none;
 }
 
 footer {
