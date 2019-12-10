@@ -8,6 +8,13 @@
     width: 100%;
     height: auto;
 }
+
+@media (max-width: 767px) {
+    .col-8 {
+        max-width: 600px;
+        margin: 0 auto;
+        width: 70%;
+    } 
 /* 
 @media screen and (max-width:768px) {
     h1 {
