@@ -30,19 +30,20 @@ while (questionTime){
         alert("Please enter another number between 8-128.")
         continue
     };
-    var userSpecial = confirm("Do you want any special characters?");
+    var userSpecialCase = confirm("Do you want any special characters?");
     var userLowerCase = confirm("Do you want lowercase characters?");
     var userUpperCase = confirm("Do you want uppercase characters?");
     var userNumberCase = confirm("Do you want numbers?")
+    console.log(userSpecialCase)
     // If any of the criteria is accepted, we break the while loop
-    if (userSpecial || userLowerCase || userUpperCase || userNumberCase){
+    if (userSpecialCase || userLowerCase || userUpperCase || userNumberCase){
         questionTime = false;
     } else { alert("Please accept one of the given criteria.")};
 };
 
 // Building my potential character array for the password
 let charArr = [];
-if (userSpecial){ charArr = [...specialArr]};
+if (userSpecialCase){ charArr = [...specialArr]};
 if (userUpperCase){ charArr = [...charArr, ...upperArr]};
 if (userLowerCase){ charArr = [...charArr, ...lowerArr]};
 if (userNumberCase){ charArr = [...charArr, ...numberArr]};
@@ -59,23 +60,31 @@ while(notContainsCriteria) {
         passwordArr[i] = newChar;
     };
     // Makes sure that we have every type FIX THIS
-    if (userSpecial){
+    if (userSpecialCase) {
         let specialCharTest = charInArray(passwordArr, specialArr);
-    } else {let specialCharTest = true};
-    if (userUpperCase){
-        let upperCharTest = charInArray(passwordArr, upperArr);   
-    } else let upperCharTest = true;
-    if (userLowerCase){
-        let lowerCharTest = charInArray(passwordArr, lowerArr);
-    } else let lowerCharTest = true;
+        if (specialCharTest === false){
+            continue;
+        };
+    };
     if (userNumberCase){
         let numberCharTest = charInArray(passwordArr, numberArr);
-    } else let numberCharTest = true;
-    
-    if ( specialCharTest && upperCharTest && lowerCharTest && numberCharTest ){
-        notContainsCriteria = false;
+        if (numberCharTest === false){
+            continue;
+        };
     };
-    console.log(specialCharTest)
+    if (userUpperCase){
+        let upperCharTest = charInArray(passwordArr, upperArr); 
+        if (upperCharTest === false){
+            continue;
+        }  
+    };
+    if (userLowerCase){
+        let lowerCharTest = charInArray(passwordArr, lowerArr);
+        if (lowerCharTest === false){
+            continue;
+        };
+    };
+    notContainsCriteria = false;
 };
 
 // Writing to the page!
