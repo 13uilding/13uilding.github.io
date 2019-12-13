@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var gameChoices = ['r', 'p', 's'];
+        var wins = 0;
+        var losses = 0;
+        var ties = 0;
+
+        for (let i = 0; i < 10; i++){
+            // Play each individual round
+            // 1) collect user choice
+            var userChoice = prompt("Type 'r' or 'p' or 's' to start!").toLowerCase();
+            console.log(userChoice);
+            // If user gave us a valid guess
+            if (gameChoices.includes(userChoice)) {
+                // 2) generate computer choice
+                var computerChoice = gameChoices[Math.floor(Math.random() * gameChoices.length)];
+                console.log(computerChoice);
+                // 3) display both user and computer choice
+                alert(`You Chose: ${userChoice} \nComputer Chose: ${computerChoice}`);
+                // 4) calculate whether we win/lose/tie and alert out result
+                // Ties
+                if ( userChoice === 'r' && computerChoice === 'r'){
+                    ties++;
+                    alert(`You tied! You've tied ${ties} times so far!`);
+                } else if ( ( userChoice === 'r' && computerChoice === 's') ||
+                            ( userChoice === 'p' && computerChoice === 'r') ||
+                            ( userChoice === 's' && computerChoice === 'p')) {
+                    wins++;
+                    alert(`You won! You've won ${wins} times so far!`);              
+                } else {
+                    losses++;
+                    alert(`You lost! You've lost ${losses} times so far!`);
+                };
+
+                console.log(`Wins: ${wins} | Losses: ${losses} | Ties: ${ties}`);
+            } else {
+                alert("Incase my instructions were too difficult. Please enter 'r', 'p', or 's'.")
+            };
+        };
+        
+        
+        // // Wins
+        // if ( userChoice === 'r' && computerChoice === 's') {
+        //     wins++;
+        //     alert(`You won! You've won ${wins} times so far!`);
+        // } else if ( userChoice === 'r' && computerChoice === 'p'){
+        //     losses++;
+        //     alert(`You lost! You've lost ${losses} times so far!`);
+        // };
+        // // Paper
+        // if ( userChoice === 'p' && computerChoice === 'r') {
+        //     wins++;
+        //     alert(`You won! You've won ${wins} times so far!`);
+        // } else if ( userChoice === 'p' && computerChoice === 's'){
+        //     losses++;
+        //     alert(`You lost! You've lost ${losses} times so far!`);
+        // } else if ( userChoice === 'p' && computerChoice === 'p'){
+        //     ties++;
+        //     alert(`You tied! You've tied ${ties} times so far!`);
+        // };
+        // // Scissors
+        // if ( userChoice === 's' && computerChoice === 'p') {
+        //     wins++;
+        //     alert(`You won! You've won ${wins} times so far!`);
+        // } else if ( userChoice === 's' && computerChoice === 'r'){
+        //     losses++;
+        //     alert(`You lost! You've lost ${losses} times so far!`);
+        // } else if ( userChoice === 's' && computerChoice === 's'){
+        //     ties++;
+        //     alert(`You tied! You've tied ${ties} times so far!`);
+        // };
+        </script>
+        </body>
+        </html>
