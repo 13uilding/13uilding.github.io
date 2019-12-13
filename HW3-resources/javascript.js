@@ -106,10 +106,11 @@ generateBtn.addEventListener("click", function(){
     passwordText.textContent = generatedPassword;
 
 });
- 
+  
 // Copy button functionality
 copyBtn.addEventListener("click", function(){
-    if (typeof passwordText === "object"){
+    console.log(passwordText.textContent);
+    if ( passwordText.textContent === ""){
         alert("Generate the password before copying.");
         return 0;
     };

@@ -1,0 +1,3 @@
+Originally I created the HTML file with all the javascript code inside. I then got the password generator working properly with prompts and confirms. Then I moved the javascript code into its own file. I then built the front end of the html page. After I was content with the aesthetic, I added the password generator functionality with buttons, check boxes, and textareas. I attempted to make the webpage scalable. Even though I am not totally happy with visual aspect, I am please with the functionality. I believe I ironed out all possible bugs.
+
+... Yes, that is a challenge. Try to find a bug. 
