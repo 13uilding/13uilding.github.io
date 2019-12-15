@@ -1,0 +1,32 @@
+.wrapper {
+    flex-flow: column wrap;
+    align-items: space-between;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    background-color: cornsilk;
+}
+
+.banner {
+    background-color: blue;
+    color: white;
+    margin: 0 auto;
+
+}
+
+.horizontal-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 1rem 1rem;
+    list-style-type: none;
+    padding-inline-start: 0;
+
+}
+
+
+li {
+    margin: 0;
+    padding: 10px;
+}
