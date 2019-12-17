@@ -27,17 +27,34 @@ var score;
 
 
 // Buttons
-highScoreBtn.addEventListener("click", function(){
+highScoreBtn.addEventListener("click", function(e){
+  e.preventDefault();
     console.log("you clicked me");
     score ++; //Remove this later
 });
 
-startBtn.addEventListener("click", function(){
+startBtn.addEventListener("click", function(e){
+  e.preventDefault();
   setTime();
   runQuiz();
   console.log("Timer Started");
 });
 
+// Event Delegation
+quizQuestions.addEventListener("click", function(e){
+  e.preventDefault();
+  if (e.target.matches("li")){
+    var answerIndex = event.target.getAttribute("id");
+    console.log(answerIndex);
+    var answer = document.getElementById(answerIndex).textContent;
+    if ( answer === q1.correct ){
+      console.log("right");
+    } else if ( answer !== q1.correct) {
+      console.log("wrong");
+    };
+    // if ( )
+  };
+});
 
 // Functions
 // Quiz
@@ -46,6 +63,7 @@ function runQuiz(){
   // Create another instance of randomIndexArray on the questions
   // Then I loop through the questions var arr = [q1, q2, q3, ...]
   var options = randomIndexArray(qArr);
+  // Turn this into a function or loop or both at some point transform?
   quizQ.textContent = q1.question;
   quizA0.textContent = q1[options[0]];
   quizA1.textContent = q1[options[1]];
@@ -60,10 +78,13 @@ function setTime() {
   var timerInterval = setInterval(function() {
     score = 0;
     secondsLeft--;
+    startBtn.setAttribute("style", "display: none");
     timeEl.textContent = "Timer: " + secondsLeft + "s";
 
+    // Need this to end if we run out of questions
     if(secondsLeft === 0) {
       clearInterval(timerInterval);
+      startBtn.setAttribute("style", "display: block");
       quizQuestions.setAttribute("style", "display: none");
       logScore();
       timeEl.textContent = "Timer: "

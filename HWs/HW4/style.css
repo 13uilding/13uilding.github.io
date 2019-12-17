@@ -47,10 +47,10 @@ h1 {
 };
 
 ul {
+    background-color: blue;
 };
 
 li {
     margin: 0;
-    background-color: blue;
 };
 
