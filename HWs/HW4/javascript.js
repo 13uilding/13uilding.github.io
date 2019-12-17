@@ -5,6 +5,7 @@ var questionWrapper = document.getElementById("main");
 var secondsLeft = 60;
 var highScores = [];
 var score;
+const qArr = ["correct", "wrong1", "wrong2", "wrong3"];
 
 highScoreBtn.addEventListener("click", function(){
     console.log("you clicked me");
@@ -47,3 +48,15 @@ function logHighScore() {
 //   questionWrapper.appendChild(imgEl);
 
 }
+
+// randomize the questions using this array
+function randomIndexArray(){
+  var qIndexArr = [];
+  while ( qIndexArr.length !== qArr.length ){
+    var index = Math.floor(Math.random() * qArr.length);
+    if ( qIndexArr.includes(index) ) {
+      continue;
+    } else qIndexArr.push(index);
+  };
+  return qIndexArr;
+};

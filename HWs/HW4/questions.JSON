@@ -1,0 +1,8 @@
+'var q1 = {
+    question: "Which method doesn't work on an array?", 
+    correct: ".split()",
+    wrong1: ".slice()",
+    wrong2: ".splice()",
+    wrong3: ".join()"
+    };
+'
